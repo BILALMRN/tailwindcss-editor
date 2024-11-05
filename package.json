@@ -1,0 +1,105 @@
+{
+  "name": "tailwindcss-editor",
+  "displayName": "TailwindCss Editor",
+  "description": "Visual Editors for TailwindCss",
+  "icon": "icon.png",
+  "version": "1.0.0",
+  "publisher": "BilalMrn",
+  "author": "BilalMrn",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BILALMRN/tailwindcss-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BILALMRN/tailwindcss-editor/issues"
+  },
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+  "vscode",
+  "Visual Studio Code",
+  "tailwindCss",
+  "Tailwind CSS",
+  "HTML editing",
+  "web development",
+  "frontend development",
+  "Tailwind classes",
+  "web design",
+  "tailwind editor",
+  "custom components",
+  "prebuilt components",
+  "UI components",
+  "HTML",
+  "CSS utilities",
+  "tailwind utility classes",
+  "vscode extensions",
+  "developer tools",
+  "productivity tools"
+],
+  "tags": [
+  "vscode",
+  "productivity",
+  "tailwindCSS",
+  "frontend",
+  "UI design",
+  "HTML editor",
+  "web design tools",
+  "developer tools",
+  "web development",
+  "tailwind utilities",
+  "custom components",
+  "tailwind classes",
+  "frontend productivity"
+],
+  "activationEvents": [],
+  "browser": "./dist/web/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tailwindCss-editor.costumeTailwindCss",
+        "title": "tailwindCss Editor"
+      }
+    ],
+    "menus": {
+        "editor/context": [
+            {
+                "command": "tailwindCss-editor.costumeTailwindCss",
+                "when": "editorHasSelection",
+                "group": "1_modification"
+            }
+        ]
+    }
+  },
+  "scripts": {
+    "test": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. --extensionTestsPath=dist/web/test/suite/index.js",
+    "pretest": "npm run compile-web",
+    "vscode:prepublish": "npm run package-web",
+    "compile-web": "webpack",
+    "watch-web": "webpack --watch",
+    "package-web": "webpack --mode production --devtool hidden-source-map",
+    "lint": "eslint src",
+    "run-in-browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ."
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.9",
+    "@types/assert": "^1.5.10",
+    "eslint": "^9.13.0",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "mocha": "^10.7.3",
+    "typescript": "^5.6.3",
+    "@vscode/test-web": "^0.0.63",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "@types/webpack-env": "^1.18.5",
+    "assert": "^2.1.0",
+    "process": "^0.11.10"
+  }
+}
